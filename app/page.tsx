@@ -14,11 +14,11 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'Cosmic Cowboys',
-  description: 'A frame telling the story of Cosmic Cowboys',
+  title: 'Superform poker stickers rate',
+  description: 'A frame telling about stickers pack from CryptoCat',
   openGraph: {
-    title: 'Cosmic Cowboys',
-    description: 'A frame telling the story of Cosmic Cowboys',
+    title: 'Poker pack',
+    description: 'A frame telling about stickers pack from CryptoCat',
     images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`],
   },
   other: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
       <>
-        <h1>Cosmic Cowboys</h1>
+        <h1>Superform poker stickers rate</h1>
       </>
   );
 }
