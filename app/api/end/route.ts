@@ -6,13 +6,11 @@ export async function POST(req: NextRequest): Promise<Response> {
     const buttonId = data.untrustedData.buttonIndex;
 
     let path: string;
-    if (buttonId === 1) {
-        path = "cosmiccowboys";
-    } else if (buttonId === 2) {
-        path = "pinatacloud";
-    } else if (buttonId === 3) {
-        path = "video";
-    } else {
+
+    if (buttonId > 0) {
+        path = "poker";
+    }
+     else {
         path = "";
     }
     const headers = new Headers();

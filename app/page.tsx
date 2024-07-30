@@ -3,10 +3,9 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
-  accepts: {},
   buttons: [
     {
-      label: "Begin"
+      label: "Show me stickers"
     }
   ],
   image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`,
