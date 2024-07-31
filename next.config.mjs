@@ -7,7 +7,7 @@ const nextConfig = {
                 source: '/poker',
                 destination: 'https://discord.gg/superform?event=1266488316652421181',
                 permanent: false
-            },
+            }
         ]
     }
 };

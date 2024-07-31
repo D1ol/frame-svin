@@ -8,7 +8,10 @@ const frameMetadata = getFrameMetadata({
       label: "Show me stickers"
     }
   ],
-  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`,
+  image: {
+    src: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`,
+    aspectRatio: "1:1"
+  },
   post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 

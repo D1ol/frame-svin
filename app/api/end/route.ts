@@ -7,7 +7,11 @@ export async function POST(req: NextRequest): Promise<Response> {
 
     let path: string;
 
-    if (buttonId > 0) {
+    if (buttonId == 1) {
+        path = "d1ol";
+    }else if (buttonId == 2) {
+        path = "cryptoCat";
+    }else if (buttonId == 3) {
         path = "poker";
     }
      else {
