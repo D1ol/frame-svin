@@ -11,8 +11,10 @@
   "dependencies": {
     "@coinbase/onchainkit": "^0.26.8",
     "next": "14.2.5",
+    "pinata-fdk": "^3.10.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "viem": "^2.18.7"
   },
   "devDependencies": {
     "@types/node": "^20",
