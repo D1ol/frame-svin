@@ -12,7 +12,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     try {
         const frameMetadata = await fdk.getFrameMetadata({
             buttons: [{ label: "Show me stickers", action: "post" }],
-            post_url: `${process.env.BASE_URL}/api/stickers?id=1`,
+            post_url: `${process.env.BASE_URL}api/stickers?id=1`,
             aspect_ratio: "1:1",
             cid: `Qmcp2mCmvCM15EFbAqsoUP7Epx69zrdWzg19fo82DUqXtZ`,
         });

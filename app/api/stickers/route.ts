@@ -15,7 +15,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     const nextId = idAsNumber+1;
 
     let frameConfig: FrameHTMLType  = {
-        post_url: `${process.env.BASE_URL}/api/stickers?id=${nextId}`,
+        post_url: `${process.env.BASE_URL}api/stickers?id=${nextId}`,
         image: {
             url: `${process.env.PINATA_GATEWAY_URL}/ipfs/${process.env.PINATA_CID}/${idAsNumber}.png`
         },
