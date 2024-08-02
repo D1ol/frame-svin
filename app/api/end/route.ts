@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {getFrameMetadata} from "@coinbase/onchainkit/frame";
 import type {Metadata} from "next";
-import { PinataFDK } from "pinata-fdk";
+import {FrameHTMLType, PinataFDK} from "pinata-fdk";
 
 const fdk = new PinataFDK({
     pinata_jwt: process.env.PINATA_JWT as string,
@@ -26,7 +26,13 @@ export async function POST(req: NextRequest): Promise<Response> {
     //  else {
     //     path = "";
     // }
-    let frameConfig = {
+    type FrameButtonMetadata = {
+        label: string;
+        action?: "post" | "post_redirect" | "mint" | "link" | "tx";
+        target?: string;
+    };
+
+    const frameConfig: FrameHTMLType  = {
 
         buttons: [
             {label: "Frame author", action: "link", target:"https://warpcast.com/d1ol"},

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {getFrameMetadata} from "@coinbase/onchainkit/frame";
 import type {Metadata} from "next";
-import { PinataFDK } from "pinata-fdk";
+import {FrameHTMLType, PinataFDK} from "pinata-fdk";
 
 const fdk = new PinataFDK({
     pinata_jwt: process.env.PINATA_JWT as string,
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     const idAsNumber = parseInt(id);
     const nextId = idAsNumber+1;
 
-    let frameConfig = {
+    let frameConfig: FrameHTMLType  = {
         post_url: `${process.env.BASE_URL}/api/stickers?id=${nextId}`,
         image: {
             url: `${process.env.PINATA_GATEWAY_URL}/ipfs/${process.env.PINATA_CID}/${idAsNumber}.png`
