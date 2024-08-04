@@ -12,7 +12,7 @@ const frameMetadata = getFrameMetadata({
     src: `${process.env.PINATA_GATEWAY_URL}/ipfs/${process.env.PINATA_CID}/0.png`,
     aspectRatio: "1:1"
   },
-  post_url: `${process.env.BASE_URL}api/stickers?id=1`,
+  post_url: `${process.env.BASE_URL}/api/stickers?id=1`,
 });
 
 export const metadata: Metadata = {

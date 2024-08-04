@@ -9,32 +9,33 @@ const fdk = new PinataFDK({
 });
 
 export async function POST(req: NextRequest): Promise<Response> {
+    let morphoFolder = 'QmSZVk5HyjBxjfdiiz7AFbtD9hV7zbC3N4hbY2WwJLeGkC';
+
     const searchParams = req.nextUrl.searchParams
     const id:any = searchParams.get('id')??0
     const idAsNumber = parseInt(id);
     const nextId = idAsNumber+1;
 
     let frameConfig: FrameHTMLType  = {
-        post_url: `${process.env.BASE_URL}/api/stickers?id=${nextId}`,
+        post_url: `${process.env.BASE_URL}/api/pools/morpho?id=${nextId}`,
         image: {
-            url: `${process.env.PINATA_GATEWAY_URL}/ipfs/${process.env.PINATA_CID}/${idAsNumber}.png`
+            url: `${process.env.PINATA_GATEWAY_URL}/ipfs/${morphoFolder}/${nextId}.png`
         },
         buttons: [
             {
-                label: "Show next"
+                label: "More"
             }
         ],
         aspect_ratio: "1:1",
     };
 
-    if(idAsNumber == 4){
+    if(idAsNumber == 2){
         frameConfig.buttons = [
-            { label: "1"},
-            { label: "2"},
-            { label: "3" },
+            { label: "Morpho pool", action: "link" , target: "https://www.superform.xyz/protocol/morpho"},
+            { label: "Others pools", action: "link" , target: "https://www.superform.xyz/protocols"},
+            { label: "Go back", action:"post", target: `${process.env.BASE_URL}/api/pools`},
         ];
-        frameConfig.post_url =  `${process.env.BASE_URL}/api/end`
-        frameConfig.aspect_ratio = "1.91:1";
+        frameConfig.post_url =  `${process.env.BASE_URL}/api/pools?type=reload`
     }
 
     return new NextResponse(await fdk.getFrameMetadata(frameConfig));
