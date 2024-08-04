@@ -9,10 +9,10 @@ const frameMetadata = getFrameMetadata({
     }
   ],
   image: {
-    src: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`,
+    src: `${process.env.PINATA_GATEWAY_URL}/ipfs/${process.env.PINATA_CID}/0.png`,
     aspectRatio: "1:1"
   },
-  post_url: `${process.env.NEXT_PUBLIC_BASE_URL}api/stickers?id=1`,
+  post_url: `${process.env.BASE_URL}api/stickers?id=1`,
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Poker pack',
     description: 'A frame telling about stickers pack from CryptoCat',
-    images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/${process.env.NEXT_PUBLIC_CID}/0.png`],
+    images: [`${process.env.PINATA_GATEWATY_URL}/ipfs/${process.env.PINATA_CID}/0.png`],
   },
   other: {
     ...frameMetadata,
