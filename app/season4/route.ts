@@ -21,7 +21,7 @@ async function getResponse()
                 { label: "Superform Safari Tournament 4 Overview"}
             ],
             aspect_ratio: "1:1",
-            cid: `QmVWQwDdKKZ5KxYNBRFDSvvRMCwyCssNJaCKXCoXjAdrbB`,
+            cid: `QmRCmrPWPSse7zTJMNwQYjRZTyKLGWpKHDLCy1NeoFkYiC`,
             post_url: `${process.env.BASE_URL}/api/season4?type=reload`,
         });
         return new NextResponse(frameMetadata);
