@@ -65,7 +65,7 @@ export async function POST(req: NextRequest): Promise<Response> {
             {
                 label: "Go back 🔙",
                 action: "post",
-                target: `${process.env.BASE_URL}/api/season4`
+                target: `${process.env.BASE_URL}/api/season4?type=reload`
             },
             {
                 label: "Ribbit 🐸🔊",
