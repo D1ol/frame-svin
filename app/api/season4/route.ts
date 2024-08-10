@@ -21,7 +21,7 @@ async function getResponse()
                 { label: "Join to us", action: "link", target: "https://www.superform.xyz/protocols" },
             ],
             aspect_ratio: "1:1",
-            cid: `QmVWQwDdKKZ5KxYNBRFDSvvRMCwyCssNJaCKXCoXjAdrbB`,
+            cid: `QmRCmrPWPSse7zTJMNwQYjRZTyKLGWpKHDLCy1NeoFkYiC`,
             post_url: `${process.env.BASE_URL}/api/season4/steps?id=0`,
         });
         return new NextResponse(frameMetadata);
