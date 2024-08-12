@@ -33,8 +33,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         frameConfig.buttons = [
             { label: "Morpho pools", action: "link" , target: "https://www.superform.xyz/protocol/morpho"},
             { label: "Others pools", action: "link" , target: "https://www.superform.xyz/protocols"},
-            { label: "Morpho site", action: "link" , target: "https://morpho.org/"},
-            { label: "Go back", action:"post", target: `${process.env.BASE_URL}/api/pools`},
+            { label: "Morpho site", action: "link" , target: "https://morpho.org/"}
         ];
         frameConfig.post_url =  `${process.env.BASE_URL}/api/morpho?type=reload`
     }
